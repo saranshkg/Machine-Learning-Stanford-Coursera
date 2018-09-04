@@ -17,9 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-    theta -= alpha/m * X' * (X*theta - y);
+    theta -= alpha/m * X' * (X*theta - y); %Vectorized method
     
     %{
+    Loop method
+
     len_theta = length(theta);
     
     theta_tmp = theta;    

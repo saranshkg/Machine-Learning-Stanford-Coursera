@@ -16,8 +16,8 @@ J = 0;
 J = 1/(2*m) * (X*theta-y)' * (X*theta-y);
 
 %{
-predictions = X * theta;
-sqErr = (predictions - y) .^ 2;
+H = X * theta;
+sqErr = (H - y) .^ 2;
 J = 1/(2*m) * sum(sqErr);
 %}
 
